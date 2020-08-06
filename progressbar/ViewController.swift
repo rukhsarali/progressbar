@@ -4,7 +4,12 @@
 //
 //  Created by Rukhsar on 02/08/2020.
 //  Copyright © 2020 Rukhsar. All rights reserved.
-//
+//  update
+// without video , put video with name "myVideo", ofType: "mp4" and put there left side
+//  update
+// without video , put video with name "myVideo", ofType: "mp4" and put there left side
+//  update
+// without video , put video with name "myVideo", ofType: "mp4" and put there left side
 
 import UIKit
 import MBCircularProgressBar

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		32E76A2D1C43A43917F95E94 /* Pods_progressbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F2428DEB1DDE7B89AEA825 /* Pods_progressbar.framework */; };
-		906CBC7E24D894E4001FFAE3 /* myVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 906CBC7D24D894E3001FFAE3 /* myVideo.mp4 */; };
 		90D3273324D6FB220092AC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3273224D6FB220092AC7E /* AppDelegate.swift */; };
 		90D3273524D6FB220092AC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3273424D6FB220092AC7E /* SceneDelegate.swift */; };
 		90D3273724D6FB220092AC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3273624D6FB220092AC7E /* ViewController.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		35429A2B51A98A5719D78015 /* Pods-progressbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-progressbar.debug.xcconfig"; path = "Target Support Files/Pods-progressbar/Pods-progressbar.debug.xcconfig"; sourceTree = "<group>"; };
-		906CBC7D24D894E3001FFAE3 /* myVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = myVideo.mp4; sourceTree = "<group>"; };
 		90D3272F24D6FB220092AC7E /* progressbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = progressbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D3273224D6FB220092AC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D3273424D6FB220092AC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		90D3273124D6FB220092AC7E /* progressbar */ = {
 			isa = PBXGroup;
 			children = (
-				906CBC7D24D894E3001FFAE3 /* myVideo.mp4 */,
 				90D3273224D6FB220092AC7E /* AppDelegate.swift */,
 				90D3273424D6FB220092AC7E /* SceneDelegate.swift */,
 				90D3273624D6FB220092AC7E /* ViewController.swift */,
@@ -160,7 +157,6 @@
 				90D3274224D6FB250092AC7E /* LaunchScreen.storyboard in Resources */,
 				90D3273F24D6FB250092AC7E /* Assets.xcassets in Resources */,
 				90D3273A24D6FB220092AC7E /* Main.storyboard in Resources */,
-				906CBC7E24D894E4001FFAE3 /* myVideo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
