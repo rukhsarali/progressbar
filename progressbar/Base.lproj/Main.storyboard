@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="progressbar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek4-PE-HIC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCq-E1-k3I">
+                                        <rect key="frame" x="154" y="62" width="104" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.53725490200000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSZ-lh-nFu">
+                                        <rect key="frame" x="308" y="798" width="76" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xw7-Re-4mw"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SET-Ew-Jel" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="9IX-fd-HAU"/>
+                                            <constraint firstAttribute="height" constant="300" id="Xhm-eQ-tqP"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-XD-Vuw">
+                                        <rect key="frame" x="155" y="60" width="104" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-B7-AyF">
+                                        <rect key="frame" x="30" y="798" width="65" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="changeValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COU-Y9-oaU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="AQk-XD-Vuw" firstAttribute="top" secondItem="ek4-PE-HIC" secondAttribute="top" constant="60" id="38X-XO-zei"/>
+                                    <constraint firstAttribute="trailing" secondItem="xSZ-lh-nFu" secondAttribute="trailing" constant="30" id="8pJ-K9-da1"/>
+                                    <constraint firstAttribute="bottom" secondItem="xSZ-lh-nFu" secondAttribute="bottom" constant="50" id="BLF-GI-IAa"/>
+                                    <constraint firstItem="AQk-XD-Vuw" firstAttribute="centerX" secondItem="ek4-PE-HIC" secondAttribute="centerX" id="CI7-0v-ijN"/>
+                                    <constraint firstItem="SET-Ew-Jel" firstAttribute="centerY" secondItem="ek4-PE-HIC" secondAttribute="centerY" id="JME-bK-BLf"/>
+                                    <constraint firstItem="SET-Ew-Jel" firstAttribute="centerX" secondItem="ek4-PE-HIC" secondAttribute="centerX" id="SPa-qi-TWJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gtg-B7-AyF" secondAttribute="bottom" constant="50" id="Xgq-yl-j6h"/>
+                                    <constraint firstItem="Gtg-B7-AyF" firstAttribute="leading" secondItem="ek4-PE-HIC" secondAttribute="leading" constant="30" id="oY6-9i-1do"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ek4-PE-HIC" secondAttribute="trailing" id="6om-DO-cqf"/>
+                            <constraint firstAttribute="bottom" secondItem="ek4-PE-HIC" secondAttribute="bottom" id="EZi-nl-Gci"/>
+                            <constraint firstItem="ek4-PE-HIC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vI8-pN-lpH"/>
+                            <constraint firstItem="ek4-PE-HIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="veP-20-7jb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgrounView" destination="ek4-PE-HIC" id="hFm-XE-a8H"/>
+                        <outlet property="progressBar" destination="SET-Ew-Jel" id="oIa-WH-dFO"/>
+                        <outlet property="resetButtonLabel" destination="xSZ-lh-nFu" id="bUP-nH-rwG"/>
+                        <outlet property="startStop" destination="Gtg-B7-AyF" id="Pf6-3P-q9m"/>
+                        <outlet property="timerLabel" destination="AQk-XD-Vuw" id="f5h-CG-aTO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
